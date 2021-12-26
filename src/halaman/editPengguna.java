@@ -89,11 +89,11 @@ public class editPengguna extends javax.swing.JFrame {
                 .addComponent(tingkatButton)
                 .addGap(18, 18, 18)
                 .addComponent(editButton)
-                .addContainerGap(569, Short.MAX_VALUE))
+                .addContainerGap(567, Short.MAX_VALUE))
         );
 
         editLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        editLabel.setText("Update Pengguna");
+        editLabel.setText("Edit Pengguna");
 
         usernameLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         usernameLabel.setText("Username");
