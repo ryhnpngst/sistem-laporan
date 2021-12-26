@@ -29,7 +29,7 @@ public class login extends javax.swing.JFrame {
 
         loginPanel = new javax.swing.JPanel();
         judulLabel = new javax.swing.JLabel();
-        usernamelTextField = new javax.swing.JTextField();
+        usernameTextField = new javax.swing.JTextField();
         passPasswordField = new javax.swing.JPasswordField();
         usernameLabel = new javax.swing.JLabel();
         passwordLabel = new javax.swing.JLabel();
@@ -47,7 +47,7 @@ public class login extends javax.swing.JFrame {
         judulLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         judulLabel.setText("Login dengan username");
 
-        usernamelTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        usernameTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         passPasswordField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
@@ -82,7 +82,7 @@ public class login extends javax.swing.JFrame {
                                 .addComponent(passwordLabel))
                             .addGap(18, 18, 18)
                             .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(usernamelTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                .addComponent(usernameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                                 .addComponent(passPasswordField)))
                         .addComponent(loginButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(belumLabel)
@@ -97,7 +97,7 @@ public class login extends javax.swing.JFrame {
                 .addGap(13, 13, 13)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(usernamelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordLabel)
@@ -175,6 +175,6 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPasswordField passPasswordField;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JLabel usernameLabel;
-    private javax.swing.JTextField usernamelTextField;
+    private javax.swing.JTextField usernameTextField;
     // End of variables declaration//GEN-END:variables
 }

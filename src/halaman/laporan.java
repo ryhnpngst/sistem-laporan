@@ -29,9 +29,7 @@ public class laporan extends javax.swing.JFrame {
 
         menuPanel = new javax.swing.JPanel();
         menuLabel = new javax.swing.JLabel();
-        buatLaporanButton = new javax.swing.JButton();
         tingkatButton = new javax.swing.JButton();
-        editButton = new javax.swing.JButton();
         buatLaporanLabel = new javax.swing.JLabel();
         tanggalLaporanLabel = new javax.swing.JLabel();
         kabupatenLaporanLabel = new javax.swing.JLabel();
@@ -53,14 +51,8 @@ public class laporan extends javax.swing.JFrame {
         menuLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         menuLabel.setText("Menu");
 
-        buatLaporanButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        buatLaporanButton.setText("Buat Laporan");
-
         tingkatButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         tingkatButton.setText("Tingkat Kriminalitas");
-
-        editButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        editButton.setText("Edit Pengguna");
 
         javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
         menuPanel.setLayout(menuPanelLayout);
@@ -68,11 +60,9 @@ public class laporan extends javax.swing.JFrame {
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(menuLabel)
-                    .addComponent(tingkatButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buatLaporanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(editButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(tingkatButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         menuPanelLayout.setVerticalGroup(
@@ -81,12 +71,8 @@ public class laporan extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(menuLabel)
                 .addGap(18, 18, 18)
-                .addComponent(buatLaporanButton)
-                .addGap(18, 18, 18)
                 .addComponent(tingkatButton)
-                .addGap(18, 18, 18)
-                .addComponent(editButton)
-                .addContainerGap(567, Short.MAX_VALUE))
+                .addContainerGap(649, Short.MAX_VALUE))
         );
 
         buatLaporanLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -234,11 +220,9 @@ public class laporan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buatLaporanButton;
     private javax.swing.JLabel buatLaporanLabel;
     private javax.swing.JLabel detailLabel;
     private javax.swing.JTextArea detailTextArea;
-    private javax.swing.JButton editButton;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> jenisKriminalitasComboBox;

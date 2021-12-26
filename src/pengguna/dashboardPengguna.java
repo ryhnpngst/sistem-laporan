@@ -1,20 +1,21 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package halaman;
+package pengguna;
+
+import admin.*;
 
 /**
  *
  * @author Lenovo
  */
-public class tingkat extends javax.swing.JFrame {
+public class dashboardPengguna extends javax.swing.JFrame {
 
     /**
-     * Creates new form tingkat
+     * Creates new form dashboard
      */
-    public tingkat() {
+    public dashboardPengguna() {
         initComponents();
     }
 
@@ -28,21 +29,24 @@ public class tingkat extends javax.swing.JFrame {
     private void initComponents() {
 
         menuPanel = new javax.swing.JPanel();
-        menuLabel = new javax.swing.JLabel();
+        dashboardLabel = new javax.swing.JLabel();
         buatLaporanButton = new javax.swing.JButton();
-        tingkatLabel = new javax.swing.JLabel();
+        tingkatButton = new javax.swing.JButton();
+        selamatDatangLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tingkat Kriminalitas");
 
         menuPanel.setBackground(new java.awt.Color(255, 255, 255));
-        menuPanel.setPreferredSize(new java.awt.Dimension(200, 720));
+        menuPanel.setPreferredSize(new java.awt.Dimension(200, 700));
 
-        menuLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        menuLabel.setText("Menu");
+        dashboardLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        dashboardLabel.setText("Dashboard");
 
         buatLaporanButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         buatLaporanButton.setText("Buat Laporan");
+
+        tingkatButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tingkatButton.setText("Tingkat Kriminalitas");
 
         javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
         menuPanel.setLayout(menuPanelLayout);
@@ -50,42 +54,43 @@ public class tingkat extends javax.swing.JFrame {
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(menuLabel)
-                    .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dashboardLabel)
+                    .addComponent(tingkatButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buatLaporanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         menuPanelLayout.setVerticalGroup(
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(menuLabel)
+                .addComponent(dashboardLabel)
                 .addGap(18, 18, 18)
                 .addComponent(buatLaporanButton)
-                .addContainerGap(649, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(tingkatButton)
+                .addContainerGap(608, Short.MAX_VALUE))
         );
 
-        tingkatLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        tingkatLabel.setText("Tingkat Kriminalitas Wilayah Yogyakarta");
+        selamatDatangLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        selamatDatangLabel.setText("Selamat Datang atauApa");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(tingkatLabel)
-                .addGap(0, 314, Short.MAX_VALUE))
+                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 509, Short.MAX_VALUE)
+                .addComponent(selamatDatangLabel)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(menuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(tingkatLabel)
+                .addContainerGap()
+                .addComponent(selamatDatangLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -109,28 +114,32 @@ public class tingkat extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tingkat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashboardPengguna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tingkat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashboardPengguna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tingkat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashboardPengguna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tingkat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashboardPengguna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tingkat().setVisible(true);
+                new dashboardPengguna().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buatLaporanButton;
-    private javax.swing.JLabel menuLabel;
+    private javax.swing.JLabel dashboardLabel;
     private javax.swing.JPanel menuPanel;
-    private javax.swing.JLabel tingkatLabel;
+    private javax.swing.JLabel selamatDatangLabel;
+    private javax.swing.JButton tingkatButton;
     // End of variables declaration//GEN-END:variables
 }

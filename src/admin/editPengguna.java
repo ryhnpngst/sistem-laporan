@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package halaman;
+package admin;
 
 /**
  *
@@ -31,7 +31,6 @@ public class editPengguna extends javax.swing.JFrame {
         menuLabel = new javax.swing.JLabel();
         buatLaporanButton = new javax.swing.JButton();
         tingkatButton = new javax.swing.JButton();
-        editButton = new javax.swing.JButton();
         editLabel = new javax.swing.JLabel();
         usernameLabel = new javax.swing.JLabel();
         namaDepanLabel = new javax.swing.JLabel();
@@ -62,9 +61,6 @@ public class editPengguna extends javax.swing.JFrame {
         tingkatButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         tingkatButton.setText("Tingkat Kriminalitas");
 
-        editButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        editButton.setText("Edit Pengguna");
-
         javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
         menuPanel.setLayout(menuPanelLayout);
         menuPanelLayout.setHorizontalGroup(
@@ -74,8 +70,7 @@ public class editPengguna extends javax.swing.JFrame {
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(menuLabel)
                     .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tingkatButton)
-                    .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tingkatButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         menuPanelLayout.setVerticalGroup(
@@ -87,9 +82,7 @@ public class editPengguna extends javax.swing.JFrame {
                 .addComponent(buatLaporanButton)
                 .addGap(18, 18, 18)
                 .addComponent(tingkatButton)
-                .addGap(18, 18, 18)
-                .addComponent(editButton)
-                .addContainerGap(567, Short.MAX_VALUE))
+                .addContainerGap(608, Short.MAX_VALUE))
         );
 
         editLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -267,7 +260,6 @@ public class editPengguna extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buatLaporanButton;
-    private javax.swing.JButton editButton;
     private javax.swing.JButton editJButton;
     private javax.swing.JLabel editLabel;
     private javax.swing.JButton hapusJButton;
