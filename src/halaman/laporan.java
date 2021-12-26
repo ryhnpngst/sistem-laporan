@@ -90,7 +90,7 @@ public class laporan extends javax.swing.JFrame {
         );
 
         buatLaporanLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        buatLaporanLabel.setText("Create Laporan");
+        buatLaporanLabel.setText("Buat Laporan");
 
         tanggalLaporanLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         tanggalLaporanLabel.setText("Tanggal Kejadian");
