@@ -37,12 +37,12 @@ public class laporan extends javax.swing.JFrame {
         kabupatenLaporanLabel = new javax.swing.JLabel();
         jenisLaporanLabel = new javax.swing.JLabel();
         jenisKriminalitasComboBox = new javax.swing.JComboBox<>();
-        tanggalKriminalitasDateChooser = new com.toedter.calendar.JDateChooser();
         wilayahKriminalitasComboBox = new javax.swing.JComboBox<>();
         detailLabel = new javax.swing.JLabel();
         laporanButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         detailTextArea = new javax.swing.JTextArea();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Buat Laporan");
@@ -86,11 +86,11 @@ public class laporan extends javax.swing.JFrame {
                 .addComponent(tingkatButton)
                 .addGap(18, 18, 18)
                 .addComponent(editButton)
-                .addContainerGap(569, Short.MAX_VALUE))
+                .addContainerGap(567, Short.MAX_VALUE))
         );
 
         buatLaporanLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        buatLaporanLabel.setText("Buat Laporan");
+        buatLaporanLabel.setText("Create Laporan");
 
         tanggalLaporanLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         tanggalLaporanLabel.setText("Tanggal Kejadian");
@@ -103,9 +103,6 @@ public class laporan extends javax.swing.JFrame {
 
         jenisKriminalitasComboBox.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jenisKriminalitasComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pencurian", "Perampokan", "Pembunuhan" }));
-
-        tanggalKriminalitasDateChooser.setDateFormatString("d MMM y");
-        tanggalKriminalitasDateChooser.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         wilayahKriminalitasComboBox.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         wilayahKriminalitasComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kulon Progo", "Bantul", "Gunung Kidul", "Sleman", "Kota Yogyakarta" }));
@@ -150,13 +147,13 @@ public class laporan extends javax.swing.JFrame {
                                 .addComponent(detailLabel))
                             .addGap(24, 24, 24)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane1)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(tanggalKriminalitasDateChooser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(wilayahKriminalitasComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 200, Short.MAX_VALUE)
-                                        .addComponent(jenisKriminalitasComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGap(300, 300, 300))
-                                .addComponent(jScrollPane1)))))
+                                        .addComponent(jenisKriminalitasComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGap(300, 300, 300))))))
                 .addGap(0, 13, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -177,14 +174,15 @@ public class laporan extends javax.swing.JFrame {
                     .addComponent(wilayahKriminalitasComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tanggalLaporanLabel)
-                    .addComponent(tanggalKriminalitasDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(detailLabel)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addComponent(laporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(tanggalLaporanLabel)
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(detailLabel)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addComponent(laporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -241,6 +239,7 @@ public class laporan extends javax.swing.JFrame {
     private javax.swing.JLabel detailLabel;
     private javax.swing.JTextArea detailTextArea;
     private javax.swing.JButton editButton;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> jenisKriminalitasComboBox;
     private javax.swing.JLabel jenisLaporanLabel;
@@ -248,7 +247,6 @@ public class laporan extends javax.swing.JFrame {
     private javax.swing.JButton laporanButton;
     private javax.swing.JLabel menuLabel;
     private javax.swing.JPanel menuPanel;
-    private com.toedter.calendar.JDateChooser tanggalKriminalitasDateChooser;
     private javax.swing.JLabel tanggalLaporanLabel;
     private javax.swing.JButton tingkatButton;
     private javax.swing.JComboBox<String> wilayahKriminalitasComboBox;
