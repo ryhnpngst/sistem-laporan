@@ -30,12 +30,10 @@ public class daftar extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         daftarPanel = new javax.swing.JPanel();
         judulLabel = new javax.swing.JLabel();
-        namaDepanLabel = new javax.swing.JLabel();
-        namaBelakangLabel = new javax.swing.JLabel();
+        namaLengkapLabel = new javax.swing.JLabel();
         usernamelLabel = new javax.swing.JLabel();
         passLabel = new javax.swing.JLabel();
-        namaDepanTextField = new javax.swing.JTextField();
-        namaBelakangTextField = new javax.swing.JTextField();
+        namaLengkapTextField = new javax.swing.JTextField();
         usernamelTextField = new javax.swing.JTextField();
         passPasswordField = new javax.swing.JPasswordField();
         daftarButton = new javax.swing.JButton();
@@ -54,11 +52,8 @@ public class daftar extends javax.swing.JFrame {
         judulLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         judulLabel.setText("Daftar dengan username");
 
-        namaDepanLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        namaDepanLabel.setText("Nama depan");
-
-        namaBelakangLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        namaBelakangLabel.setText("Nama belakang");
+        namaLengkapLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        namaLengkapLabel.setText("Nama Lengkap");
 
         usernamelLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         usernamelLabel.setText("Username");
@@ -66,9 +61,7 @@ public class daftar extends javax.swing.JFrame {
         passLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         passLabel.setText("Password");
 
-        namaDepanTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-
-        namaBelakangTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        namaLengkapTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         usernamelTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
@@ -92,23 +85,24 @@ public class daftar extends javax.swing.JFrame {
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(daftarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(daftarPanelLayout.createSequentialGroup()
-                        .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(judulLabel)
-                            .addGroup(daftarPanelLayout.createSequentialGroup()
-                                .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(namaDepanLabel)
-                                    .addComponent(namaBelakangLabel)
-                                    .addComponent(usernamelLabel)
-                                    .addComponent(passLabel))
-                                .addGap(28, 28, 28)
-                                .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(namaDepanTextField)
-                                    .addComponent(namaBelakangTextField)
-                                    .addComponent(usernamelTextField)
-                                    .addComponent(passPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                            .addComponent(sudahLabel)
-                            .addComponent(loginButton))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(usernamelLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(usernamelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(daftarPanelLayout.createSequentialGroup()
+                            .addComponent(passLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(passPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(daftarPanelLayout.createSequentialGroup()
+                            .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(judulLabel)
+                                .addGroup(daftarPanelLayout.createSequentialGroup()
+                                    .addComponent(namaLengkapLabel)
+                                    .addGap(44, 44, 44)
+                                    .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(sudahLabel)
+                                .addComponent(loginButton))
+                            .addGap(0, 0, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         daftarPanelLayout.setVerticalGroup(
@@ -118,12 +112,8 @@ public class daftar extends javax.swing.JFrame {
                 .addComponent(judulLabel)
                 .addGap(18, 18, 18)
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(namaDepanLabel)
-                    .addComponent(namaDepanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(namaBelakangLabel)
-                    .addComponent(namaBelakangTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(namaLengkapLabel)
+                    .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernamelLabel)
@@ -134,7 +124,7 @@ public class daftar extends javax.swing.JFrame {
                     .addComponent(passPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(daftarButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(sudahLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loginButton)
@@ -146,16 +136,16 @@ public class daftar extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
+                .addContainerGap(85, Short.MAX_VALUE)
                 .addComponent(daftarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78))
+                .addGap(79, 79, 79))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addGap(63, 63, 63)
                 .addComponent(daftarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         pack();
@@ -202,10 +192,8 @@ public class daftar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel judulLabel;
     private javax.swing.JButton loginButton;
-    private javax.swing.JLabel namaBelakangLabel;
-    private javax.swing.JTextField namaBelakangTextField;
-    private javax.swing.JLabel namaDepanLabel;
-    private javax.swing.JTextField namaDepanTextField;
+    private javax.swing.JLabel namaLengkapLabel;
+    private javax.swing.JTextField namaLengkapTextField;
     private javax.swing.JLabel passLabel;
     private javax.swing.JPasswordField passPasswordField;
     private javax.swing.JLabel sudahLabel;

@@ -62,7 +62,7 @@ public class login extends javax.swing.JFrame {
         loginButton.setPreferredSize(new java.awt.Dimension(63, 30));
 
         belumLabel.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        belumLabel.setText("Belum punya akun???");
+        belumLabel.setText("Belum punya akun?");
 
         daftarButton.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         daftarButton.setText("Daftar");
