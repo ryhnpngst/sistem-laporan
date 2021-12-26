@@ -36,7 +36,6 @@ public class tingkat extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tingkat Kriminalitas");
-        setPreferredSize(new java.awt.Dimension(815, 720));
 
         menuPanel.setBackground(new java.awt.Color(255, 255, 255));
         menuPanel.setPreferredSize(new java.awt.Dimension(200, 720));
@@ -81,7 +80,7 @@ public class tingkat extends javax.swing.JFrame {
         );
 
         tingkatLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        tingkatLabel.setText("Tingkat Kriminalitas Wilayah");
+        tingkatLabel.setText("Tingkat Kriminalitas Wilayah Yogyakarta");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,7 +90,7 @@ public class tingkat extends javax.swing.JFrame {
                 .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(tingkatLabel)
-                .addGap(0, 410, Short.MAX_VALUE))
+                .addGap(0, 314, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
