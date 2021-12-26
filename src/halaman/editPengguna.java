@@ -93,7 +93,7 @@ public class editPengguna extends javax.swing.JFrame {
         );
 
         editLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        editLabel.setText("Edit Pengguna");
+        editLabel.setText("Update Pengguna");
 
         usernameLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         usernameLabel.setText("Username");
