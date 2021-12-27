@@ -33,11 +33,9 @@ public class editPengguna extends javax.swing.JFrame {
         tingkatButton = new javax.swing.JButton();
         editLabel = new javax.swing.JLabel();
         usernameLabel = new javax.swing.JLabel();
-        passwordLabel = new javax.swing.JLabel();
         namaLengkapLabel = new javax.swing.JLabel();
         roleLabel = new javax.swing.JLabel();
         usernameTextField = new javax.swing.JTextField();
-        passwordTextField = new javax.swing.JTextField();
         namaLengkapTextField = new javax.swing.JTextField();
         roleComboBox = new javax.swing.JComboBox<>();
         tambahButton = new javax.swing.JButton();
@@ -91,9 +89,6 @@ public class editPengguna extends javax.swing.JFrame {
         usernameLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         usernameLabel.setText("Username");
 
-        passwordLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        passwordLabel.setText("Password");
-
         namaLengkapLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         namaLengkapLabel.setText("Nama Lengkap");
 
@@ -101,8 +96,6 @@ public class editPengguna extends javax.swing.JFrame {
         roleLabel.setText("Role");
 
         usernameTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-
-        passwordTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         namaLengkapTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
@@ -145,7 +138,6 @@ public class editPengguna extends javax.swing.JFrame {
                 .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(passwordLabel)
                     .addComponent(editLabel)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,15 +148,14 @@ public class editPengguna extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(tambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(hapusJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(roleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(tambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(hapusJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(0, 84, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -180,18 +171,14 @@ public class editPengguna extends javax.swing.JFrame {
                     .addComponent(usernameLabel)
                     .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passwordLabel)
-                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(namaLengkapLabel)
                     .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(roleLabel)
                     .addComponent(roleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tambahButton)
                     .addComponent(editJButton)
@@ -254,8 +241,6 @@ public class editPengguna extends javax.swing.JFrame {
     private javax.swing.JPanel menuPanel;
     private javax.swing.JLabel namaLengkapLabel;
     private javax.swing.JTextField namaLengkapTextField;
-    private javax.swing.JLabel passwordLabel;
-    private javax.swing.JTextField passwordTextField;
     private javax.swing.JComboBox<String> roleComboBox;
     private javax.swing.JLabel roleLabel;
     private javax.swing.JButton tambahButton;

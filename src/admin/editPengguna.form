@@ -28,7 +28,6 @@
               <Component id="menuPanel" min="-2" pref="161" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="passwordLabel" min="-2" max="-2" attributes="0"/>
                   <Component id="editLabel" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -40,16 +39,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="usernameTextField" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="tambahButton" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="editJButton" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="hapusJButton" min="-2" pref="100" max="-2" attributes="0"/>
-                          </Group>
                           <Component id="roleComboBox" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="namaLengkapTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                          <Component id="passwordTextField" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="tambahButton" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="editJButton" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="hapusJButton" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -72,21 +70,16 @@
                   <Component id="usernameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="passwordTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="namaLengkapLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="namaLengkapTextField" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="namaLengkapLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="namaLengkapTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="roleLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="roleComboBox" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="roleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="roleComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="tambahButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="editJButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -181,14 +174,6 @@
         <Property name="text" type="java.lang.String" value="Username"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="passwordLabel">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="12" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Password"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="namaLengkapLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -206,13 +191,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="usernameTextField">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="12" style="0"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="passwordTextField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="12" style="0"/>
