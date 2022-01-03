@@ -5,17 +5,32 @@
  */
 package halaman;
 
+import admin.dashboard;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import static koneksi.konek.konek;
+import koneksi.session;
+import pengguna.dashboardPengguna;
+
 /**
  *
  * @author Lenovo
  */
 public class login extends javax.swing.JFrame {
+    Connection con = null;
+    ResultSet rs = null;
+    PreparedStatement pst = null;
 
     /**
      * Creates new form login
      */
     public login() {
         initComponents();
+        konek();
     }
 
     /**
@@ -60,12 +75,22 @@ public class login extends javax.swing.JFrame {
         loginButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         loginButton.setText("Login");
         loginButton.setPreferredSize(new java.awt.Dimension(63, 30));
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtonActionPerformed(evt);
+            }
+        });
 
         belumLabel.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         belumLabel.setText("Belum punya akun?");
 
         daftarButton.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         daftarButton.setText("Daftar");
+        daftarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                daftarButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
         loginPanel.setLayout(loginPanelLayout);
@@ -130,6 +155,58 @@ public class login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        // TODO add your handling code here:
+        String user = usernameTextField.getText();
+        String password = passPasswordField.getText();
+        String hak = null;
+        String username = null;
+        
+        if(user.contains(" ")){
+            JOptionPane.showMessageDialog(null, "Username Tidak Boleh Ada Spasi!", "Gagal", JOptionPane.ERROR_MESSAGE);
+            usernameTextField.setText("");
+            passPasswordField.setText("");
+            usernameTextField.requestFocus();
+        }else{
+            try{
+            Connection con = konek();
+            Statement st = con.createStatement();
+            
+            String sql = "SELECT * FROM akun WHERE username='" + user +"' and password='"+ password +"'";
+            ResultSet rs = st.executeQuery(sql);
+            
+                if(rs.next()){
+                    hak = rs.getString("role");
+                    username = rs.getString("username");
+                    JOptionPane.showMessageDialog(null, "Berhasil Login", "Sukses", JOptionPane.INFORMATION_MESSAGE);
+                    this.dispose();
+                    session.set_Username(username);
+                    if(hak.equals("pengguna")){
+                        dashboardPengguna dp = new dashboardPengguna();
+                        dp.setVisible(true);
+                    }else if(hak.equals("admin")){
+                        dashboard dash = new dashboard();
+                        dash.setVisible(true);
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null, "Username atau Password Salah!", "Gagal", JOptionPane.ERROR_MESSAGE);
+                    usernameTextField.setText("");
+                    passPasswordField.setText("");
+                    usernameTextField.requestFocus();
+                }
+            }catch(SQLException e){
+                System.out.println(e);
+            }
+        }
+    }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void daftarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarButtonActionPerformed
+        // TODO add your handling code here:
+        daftar daf = new daftar();
+        daf.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_daftarButtonActionPerformed
 
     /**
      * @param args the command line arguments

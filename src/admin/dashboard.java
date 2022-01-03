@@ -4,17 +4,40 @@
  */
 package admin;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import static koneksi.konek.konek;
+import koneksi.session;
+
 /**
  *
  * @author Lenovo
  */
 public class dashboard extends javax.swing.JFrame {
+    Connection con = null;
+    ResultSet rs = null;
+    PreparedStatement ps = null;
+    
+    String user = session.get_Username();
 
     /**
      * Creates new form dashboard
      */
     public dashboard() {
         initComponents();
+        con = konek();
+        String sql = "SELECT * FROM akun WHERE username=?";
+        try{
+            ps = con.prepareStatement(sql);
+            ps.setString(1, user);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                welcomeLabel.setText("Selamat Datang " + user);
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
     /**
@@ -31,10 +54,9 @@ public class dashboard extends javax.swing.JFrame {
         editPenggunaButton = new javax.swing.JButton();
         buatLaporanButton = new javax.swing.JButton();
         tingkatButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        welcomeLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(823, 720));
 
         menuPanel.setBackground(new java.awt.Color(255, 255, 255));
         menuPanel.setPreferredSize(new java.awt.Dimension(200, 700));
@@ -84,8 +106,8 @@ public class dashboard extends javax.swing.JFrame {
                 .addContainerGap(567, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel1.setText("Selamat Datang atauAdmin");
+        welcomeLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        welcomeLabel.setText("Selamat Datang atauAdmin");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,7 +116,7 @@ public class dashboard extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 495, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(welcomeLabel)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -102,7 +124,7 @@ public class dashboard extends javax.swing.JFrame {
             .addComponent(menuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(welcomeLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -152,8 +174,8 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JButton buatLaporanButton;
     private javax.swing.JLabel dashboardLabel;
     private javax.swing.JButton editPenggunaButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel menuPanel;
     private javax.swing.JButton tingkatButton;
+    private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }

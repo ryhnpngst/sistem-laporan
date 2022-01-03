@@ -5,6 +5,14 @@
  */
 package halaman;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import static koneksi.konek.konek;
+
 /**
  *
  * @author Lenovo
@@ -34,11 +42,13 @@ public class daftar extends javax.swing.JFrame {
         usernamelLabel = new javax.swing.JLabel();
         passLabel = new javax.swing.JLabel();
         namaLengkapTextField = new javax.swing.JTextField();
-        usernamelTextField = new javax.swing.JTextField();
+        usernameTextField = new javax.swing.JTextField();
         passPasswordField = new javax.swing.JPasswordField();
         daftarButton = new javax.swing.JButton();
         sudahLabel = new javax.swing.JLabel();
         loginButton = new javax.swing.JButton();
+        konfPassLabel = new javax.swing.JLabel();
+        konfPassPasswordField = new javax.swing.JPasswordField();
 
         jLabel3.setText("jLabel3");
 
@@ -63,18 +73,33 @@ public class daftar extends javax.swing.JFrame {
 
         namaLengkapTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        usernamelTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        usernameTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         passPasswordField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         daftarButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         daftarButton.setText("Daftar");
+        daftarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                daftarButtonActionPerformed(evt);
+            }
+        });
 
         sudahLabel.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         sudahLabel.setText("Sudah punya akun?");
 
         loginButton.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         loginButton.setText("Login");
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtonActionPerformed(evt);
+            }
+        });
+
+        konfPassLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        konfPassLabel.setText("Konfirmasi Password");
+
+        konfPassPasswordField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout daftarPanelLayout = new javax.swing.GroupLayout(daftarPanel);
         daftarPanel.setLayout(daftarPanelLayout);
@@ -83,26 +108,30 @@ public class daftar extends javax.swing.JFrame {
             .addGroup(daftarPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(daftarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(daftarPanelLayout.createSequentialGroup()
+                        .addComponent(namaLengkapLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(daftarPanelLayout.createSequentialGroup()
                         .addComponent(usernamelLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(usernamelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(daftarPanelLayout.createSequentialGroup()
-                            .addComponent(passLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(passPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(daftarPanelLayout.createSequentialGroup()
-                            .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(judulLabel)
-                                .addGroup(daftarPanelLayout.createSequentialGroup()
-                                    .addComponent(namaLengkapLabel)
-                                    .addGap(44, 44, 44)
-                                    .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(sudahLabel)
-                                .addComponent(loginButton))
-                            .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(daftarPanelLayout.createSequentialGroup()
+                        .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(daftarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(judulLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(sudahLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(loginButton, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, daftarPanelLayout.createSequentialGroup()
+                                    .addComponent(passLabel)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                                    .addComponent(passPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(daftarPanelLayout.createSequentialGroup()
+                                .addComponent(konfPassLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(konfPassPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         daftarPanelLayout.setVerticalGroup(
@@ -117,14 +146,18 @@ public class daftar extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernamelLabel)
-                    .addComponent(usernamelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passLabel)
                     .addComponent(passPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(daftarButton)
+                .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(konfPassLabel)
+                    .addComponent(konfPassPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addComponent(daftarButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(sudahLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loginButton)
@@ -136,20 +169,104 @@ public class daftar extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(85, Short.MAX_VALUE)
+                .addContainerGap(122, Short.MAX_VALUE)
                 .addComponent(daftarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79))
+                .addGap(97, 97, 97))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addComponent(daftarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        // TODO add your handling code here:
+        login log = new login();
+        log.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void daftarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarButtonActionPerformed
+        // TODO add your handling code here:
+        String nama_lengkap = namaLengkapTextField.getText();
+        String user = usernameTextField.getText();
+        String password = passPasswordField.getText();
+        String konfPassword = konfPassPasswordField.getText();
+        String passPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}";
+        String userPattern = ".{6,10}";
+        String cekUser = null;
+        String role = "pengguna";
+        
+        try{
+            Connection con = konek();
+            Statement st = con.createStatement();
+            String sql = "SELECT * FROM akun WHERE username = '"+user+"'";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                cekUser = rs.getString("username");
+            }
+            rs.close();
+            st.close();
+        }catch(SQLException e){
+            System.out.println(e);
+        }
+        
+        if(nama_lengkap.equals("")|| user.equals("")|| password.equals("")|| konfPassword.equals("")){
+            JOptionPane.showMessageDialog(null, "Tidak Boleh Ada Isian Yang Kosong!", "Gagal", JOptionPane.ERROR_MESSAGE);
+        }else if(!user.matches(userPattern)){
+            JOptionPane.showMessageDialog(null, "Username Minimal Terdiri Dari 6 Karakter dan Maksimal 10 Karakter", "Gagal", JOptionPane.ERROR_MESSAGE);
+            usernameTextField.setText("");
+            passPasswordField.setText("");
+            konfPassPasswordField.setText("");
+            usernameTextField.requestFocus();
+        }else if(cekUser!=null){
+            JOptionPane.showMessageDialog(null, "Username Yang Anda Masukkan Sudah Terdaftar!", "Gagal", JOptionPane.ERROR_MESSAGE);
+            usernameTextField.setText("");
+            passPasswordField.setText("");
+            konfPassPasswordField.setText("");
+            usernameTextField.requestFocus();
+        }else if(user.contains(" ")){
+            JOptionPane.showMessageDialog(null, "Username Tidak Boleh Ada Spasi!", "Gagal", JOptionPane.ERROR_MESSAGE);
+            usernameTextField.setText("");
+            passPasswordField.setText("");
+            konfPassPasswordField.setText("");
+            usernameTextField.requestFocus();
+        }else if(!password.matches(passPattern)){
+            JOptionPane.showMessageDialog(null, "Password Minimal Terdiri Dari 8 Karakter, Harus Terdiri Dari Angka, Huruf Besar dan Huruf Kecil, "
+                    + "serta Tidak Diperbolehkan Ada Spasi", "Gagal", JOptionPane.ERROR_MESSAGE);
+            passPasswordField.setText("");
+            konfPassPasswordField.setText("");
+            passPasswordField.requestFocus();
+        }else if(!password.equals(konfPassword)){
+            JOptionPane.showMessageDialog(null, "Password Tidak Sesuai!", "Gagal", JOptionPane.ERROR_MESSAGE);
+            passPasswordField.setText("");
+            konfPassPasswordField.setText("");
+            passPasswordField.requestFocus();
+        }else{
+            try{
+                Connection con = konek();
+                String sql = "INSERT INTO akun VALUES (?, ?, ?, ?)";
+                PreparedStatement ps = con.prepareStatement(sql);
+                ps.setString(1, user);
+                ps.setString(2, password);
+                ps.setString(3, nama_lengkap);
+                ps.setString(4, role);
+                ps.executeUpdate();
+                ps.close();
+                JOptionPane.showMessageDialog(null, "Berhasil Mendaftar Akun", "Sukses", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+                login log = new login();
+                log.setVisible(true);
+            }catch(SQLException e){
+                System.out.println(e);
+            }
+        }
+    }//GEN-LAST:event_daftarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,13 +308,15 @@ public class daftar extends javax.swing.JFrame {
     private javax.swing.JPanel daftarPanel;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel judulLabel;
+    private javax.swing.JLabel konfPassLabel;
+    private javax.swing.JPasswordField konfPassPasswordField;
     private javax.swing.JButton loginButton;
     private javax.swing.JLabel namaLengkapLabel;
     private javax.swing.JTextField namaLengkapTextField;
     private javax.swing.JLabel passLabel;
     private javax.swing.JPasswordField passPasswordField;
     private javax.swing.JLabel sudahLabel;
+    private javax.swing.JTextField usernameTextField;
     private javax.swing.JLabel usernamelLabel;
-    private javax.swing.JTextField usernamelTextField;
     // End of variables declaration//GEN-END:variables
 }

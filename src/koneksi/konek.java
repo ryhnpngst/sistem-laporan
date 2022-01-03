@@ -22,9 +22,10 @@ public class konek {
         try{
             Class.forName(driver);
             Connection con = (Connection) DriverManager.getConnection(host, user, password);
+            System.out.println("Koneksi Berhasil");
             return con;
         } catch (Exception e){
-            JOptionPane.showMessageDialog(null, e);
+            System.out.println("Koneksi Gagal");
         }
         return null;
     }
