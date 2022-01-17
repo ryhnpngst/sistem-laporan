@@ -41,43 +41,48 @@ public class daftar extends javax.swing.JFrame {
         namaLengkapLabel = new javax.swing.JLabel();
         usernamelLabel = new javax.swing.JLabel();
         passLabel = new javax.swing.JLabel();
-        namaLengkapTextField = new javax.swing.JTextField();
-        usernameTextField = new javax.swing.JTextField();
-        passPasswordField = new javax.swing.JPasswordField();
         daftarButton = new javax.swing.JButton();
         sudahLabel = new javax.swing.JLabel();
         loginButton = new javax.swing.JButton();
         konfPassLabel = new javax.swing.JLabel();
+        namaLengkapTextField = new javax.swing.JTextField();
+        usernameTextField = new javax.swing.JTextField();
+        passPasswordField = new javax.swing.JPasswordField();
         konfPassPasswordField = new javax.swing.JPasswordField();
 
         jLabel3.setText("jLabel3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Daftar");
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(244, 248, 250));
 
-        daftarPanel.setBackground(new java.awt.Color(255, 255, 255));
+        daftarPanel.setBackground(new java.awt.Color(3, 5, 9));
         daftarPanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        daftarPanel.setForeground(new java.awt.Color(3, 5, 9));
 
-        judulLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        judulLabel.setText("Daftar dengan username");
+        judulLabel.setBackground(new java.awt.Color(3, 5, 9));
+        judulLabel.setFont(new java.awt.Font("Lato", 1, 14)); // NOI18N
+        judulLabel.setForeground(new java.awt.Color(244, 248, 250));
+        judulLabel.setText("Daftar Akun E-Lapor");
 
-        namaLengkapLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        namaLengkapLabel.setBackground(new java.awt.Color(3, 5, 9));
+        namaLengkapLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        namaLengkapLabel.setForeground(new java.awt.Color(244, 248, 250));
         namaLengkapLabel.setText("Nama Lengkap");
 
-        usernamelLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        usernamelLabel.setBackground(new java.awt.Color(3, 5, 9));
+        usernamelLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        usernamelLabel.setForeground(new java.awt.Color(244, 248, 250));
         usernamelLabel.setText("Username");
 
-        passLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        passLabel.setBackground(new java.awt.Color(3, 5, 9));
+        passLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        passLabel.setForeground(new java.awt.Color(244, 248, 250));
         passLabel.setText("Password");
 
-        namaLengkapTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-
-        usernameTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-
-        passPasswordField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-
-        daftarButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        daftarButton.setBackground(new java.awt.Color(244, 248, 250));
+        daftarButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        daftarButton.setForeground(new java.awt.Color(3, 5, 9));
         daftarButton.setText("Daftar");
         daftarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,10 +90,14 @@ public class daftar extends javax.swing.JFrame {
             }
         });
 
-        sudahLabel.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        sudahLabel.setBackground(new java.awt.Color(3, 5, 9));
+        sudahLabel.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
+        sudahLabel.setForeground(new java.awt.Color(244, 248, 250));
         sudahLabel.setText("Sudah punya akun?");
 
-        loginButton.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        loginButton.setBackground(new java.awt.Color(244, 248, 250));
+        loginButton.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
+        loginButton.setForeground(new java.awt.Color(3, 5, 9));
         loginButton.setText("Login");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,10 +105,26 @@ public class daftar extends javax.swing.JFrame {
             }
         });
 
-        konfPassLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        konfPassLabel.setBackground(new java.awt.Color(3, 5, 9));
+        konfPassLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        konfPassLabel.setForeground(new java.awt.Color(244, 248, 250));
         konfPassLabel.setText("Konfirmasi Password");
 
-        konfPassPasswordField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        namaLengkapTextField.setBackground(new java.awt.Color(244, 248, 250));
+        namaLengkapTextField.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        namaLengkapTextField.setForeground(new java.awt.Color(3, 5, 9));
+
+        usernameTextField.setBackground(new java.awt.Color(244, 248, 250));
+        usernameTextField.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        usernameTextField.setForeground(new java.awt.Color(3, 5, 9));
+
+        passPasswordField.setBackground(new java.awt.Color(244, 248, 250));
+        passPasswordField.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        passPasswordField.setForeground(new java.awt.Color(3, 5, 9));
+
+        konfPassPasswordField.setBackground(new java.awt.Color(244, 248, 250));
+        konfPassPasswordField.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        konfPassPasswordField.setForeground(new java.awt.Color(3, 5, 9));
 
         javax.swing.GroupLayout daftarPanelLayout = new javax.swing.GroupLayout(daftarPanel);
         daftarPanel.setLayout(daftarPanelLayout);
@@ -109,29 +134,26 @@ public class daftar extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(daftarPanelLayout.createSequentialGroup()
-                        .addComponent(namaLengkapLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(daftarPanelLayout.createSequentialGroup()
-                        .addComponent(usernamelLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(daftarPanelLayout.createSequentialGroup()
                         .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(daftarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(judulLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(sudahLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(loginButton, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, daftarPanelLayout.createSequentialGroup()
-                                    .addComponent(passLabel)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
-                                    .addComponent(passPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(daftarPanelLayout.createSequentialGroup()
-                                .addComponent(konfPassLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(konfPassPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(namaLengkapLabel)
+                            .addComponent(usernamelLabel)
+                            .addComponent(passLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(passPasswordField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(usernameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(namaLengkapTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(daftarPanelLayout.createSequentialGroup()
+                        .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(judulLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sudahLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(loginButton, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(daftarPanelLayout.createSequentialGroup()
+                        .addComponent(konfPassLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addComponent(konfPassPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(daftarButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         daftarPanelLayout.setVerticalGroup(
@@ -139,19 +161,19 @@ public class daftar extends javax.swing.JFrame {
             .addGroup(daftarPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(judulLabel)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(namaLengkapLabel)
                     .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernamelLabel)
                     .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passLabel)
                     .addComponent(passPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(daftarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(konfPassLabel)
                     .addComponent(konfPassPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -169,16 +191,16 @@ public class daftar extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(122, Short.MAX_VALUE)
+                .addContainerGap(115, Short.MAX_VALUE)
                 .addComponent(daftarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(97, 97, 97))
+                .addGap(104, 104, 104))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(79, 79, 79)
                 .addComponent(daftarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         pack();

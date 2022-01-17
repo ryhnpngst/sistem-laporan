@@ -30,7 +30,7 @@ public class editPengguna extends javax.swing.JFrame {
         menuPanel = new javax.swing.JPanel();
         menuLabel = new javax.swing.JLabel();
         buatLaporanButton = new javax.swing.JButton();
-        tingkatButton = new javax.swing.JButton();
+        dashboardButton = new javax.swing.JButton();
         editLabel = new javax.swing.JLabel();
         usernameLabel = new javax.swing.JLabel();
         namaLengkapLabel = new javax.swing.JLabel();
@@ -62,11 +62,11 @@ public class editPengguna extends javax.swing.JFrame {
         buatLaporanButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/createCircle.png"))); // NOI18N
         buatLaporanButton.setText("Buat Laporan");
 
-        tingkatButton.setBackground(new java.awt.Color(244, 248, 250));
-        tingkatButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
-        tingkatButton.setForeground(new java.awt.Color(3, 5, 9));
-        tingkatButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/chartIcon.png"))); // NOI18N
-        tingkatButton.setText("Tingkat Kriminalitas");
+        dashboardButton.setBackground(new java.awt.Color(244, 248, 250));
+        dashboardButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        dashboardButton.setForeground(new java.awt.Color(3, 5, 9));
+        dashboardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/dashboard.png"))); // NOI18N
+        dashboardButton.setText("Dashboard");
 
         javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
         menuPanel.setLayout(menuPanelLayout);
@@ -75,10 +75,15 @@ public class editPengguna extends javax.swing.JFrame {
             .addGroup(menuPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(menuLabel)
-                    .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tingkatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(menuPanelLayout.createSequentialGroup()
+                        .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(menuLabel)
+                            .addComponent(dashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         menuPanelLayout.setVerticalGroup(
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,9 +91,9 @@ public class editPengguna extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(menuLabel)
                 .addGap(18, 18, 18)
-                .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tingkatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(574, Short.MAX_VALUE))
         );
 
@@ -256,6 +261,7 @@ public class editPengguna extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buatLaporanButton;
+    private javax.swing.JButton dashboardButton;
     private javax.swing.JButton editJButton;
     private javax.swing.JLabel editLabel;
     private javax.swing.JButton hapusJButton;
@@ -268,7 +274,6 @@ public class editPengguna extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> roleComboBox;
     private javax.swing.JLabel roleLabel;
     private javax.swing.JButton tambahButton;
-    private javax.swing.JButton tingkatButton;
     private javax.swing.JLabel usernameLabel;
     private javax.swing.JTextField usernameTextField;
     // End of variables declaration//GEN-END:variables

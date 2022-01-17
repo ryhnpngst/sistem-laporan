@@ -54,25 +54,34 @@ public class login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(244, 248, 250));
 
-        loginPanel.setBackground(new java.awt.Color(255, 255, 255));
+        loginPanel.setBackground(new java.awt.Color(3, 5, 9));
         loginPanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        loginPanel.setForeground(new java.awt.Color(3, 5, 9));
 
-        judulLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        judulLabel.setText("Login dengan username");
+        judulLabel.setBackground(new java.awt.Color(3, 5, 9));
+        judulLabel.setFont(new java.awt.Font("Lato", 1, 14)); // NOI18N
+        judulLabel.setForeground(new java.awt.Color(244, 248, 250));
+        judulLabel.setText("Login E-Lapor");
 
-        usernameTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        usernameTextField.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
 
-        passPasswordField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        passPasswordField.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
 
-        usernameLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        usernameLabel.setBackground(new java.awt.Color(3, 5, 9));
+        usernameLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        usernameLabel.setForeground(new java.awt.Color(244, 248, 250));
         usernameLabel.setText("Username");
 
-        passwordLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        passwordLabel.setBackground(new java.awt.Color(3, 5, 9));
+        passwordLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        passwordLabel.setForeground(new java.awt.Color(244, 248, 250));
         passwordLabel.setText("Password");
 
-        loginButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        loginButton.setBackground(new java.awt.Color(244, 248, 250));
+        loginButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        loginButton.setForeground(new java.awt.Color(3, 5, 9));
         loginButton.setText("Login");
         loginButton.setPreferredSize(new java.awt.Dimension(63, 30));
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -81,10 +90,14 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        belumLabel.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        belumLabel.setBackground(new java.awt.Color(3, 5, 9));
+        belumLabel.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
+        belumLabel.setForeground(new java.awt.Color(244, 248, 250));
         belumLabel.setText("Belum punya akun?");
 
-        daftarButton.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        daftarButton.setBackground(new java.awt.Color(244, 248, 250));
+        daftarButton.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
+        daftarButton.setForeground(new java.awt.Color(3, 5, 9));
         daftarButton.setText("Daftar");
         daftarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,9 +133,11 @@ public class login extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addComponent(judulLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
-                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(usernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(usernameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordLabel)
@@ -143,7 +158,7 @@ public class login extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(71, 71, 71)
                 .addComponent(loginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

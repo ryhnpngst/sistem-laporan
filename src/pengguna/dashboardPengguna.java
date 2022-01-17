@@ -4,6 +4,7 @@
  */
 package pengguna;
 
+import halaman.login;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -52,22 +53,45 @@ public class dashboardPengguna extends javax.swing.JFrame {
         menuPanel = new javax.swing.JPanel();
         dashboardLabel = new javax.swing.JLabel();
         buatLaporanButton = new javax.swing.JButton();
-        tingkatButton = new javax.swing.JButton();
+        logoutButton = new javax.swing.JButton();
+        dashboardButton = new javax.swing.JButton();
         welcomeLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Dashboard");
+        setBackground(new java.awt.Color(244, 248, 250));
 
-        menuPanel.setBackground(new java.awt.Color(255, 255, 255));
+        menuPanel.setBackground(new java.awt.Color(3, 5, 9));
+        menuPanel.setForeground(new java.awt.Color(3, 5, 9));
         menuPanel.setPreferredSize(new java.awt.Dimension(200, 700));
 
-        dashboardLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        dashboardLabel.setBackground(new java.awt.Color(244, 248, 250));
+        dashboardLabel.setFont(new java.awt.Font("Lato", 1, 18)); // NOI18N
+        dashboardLabel.setForeground(new java.awt.Color(244, 248, 250));
         dashboardLabel.setText("Dashboard");
 
-        buatLaporanButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        buatLaporanButton.setBackground(new java.awt.Color(244, 248, 250));
+        buatLaporanButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        buatLaporanButton.setForeground(new java.awt.Color(3, 5, 9));
+        buatLaporanButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/createCircle.png"))); // NOI18N
         buatLaporanButton.setText("Buat Laporan");
 
-        tingkatButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        tingkatButton.setText("Tingkat Kriminalitas");
+        logoutButton.setBackground(new java.awt.Color(244, 248, 250));
+        logoutButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        logoutButton.setForeground(new java.awt.Color(3, 5, 9));
+        logoutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/logout.png"))); // NOI18N
+        logoutButton.setText("Keluar");
+        logoutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutButtonActionPerformed(evt);
+            }
+        });
+
+        dashboardButton.setBackground(new java.awt.Color(244, 248, 250));
+        dashboardButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        dashboardButton.setForeground(new java.awt.Color(3, 5, 9));
+        dashboardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/dashboard.png"))); // NOI18N
+        dashboardButton.setText("Dashboard");
 
         javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
         menuPanel.setLayout(menuPanelLayout);
@@ -75,11 +99,17 @@ public class dashboardPengguna extends javax.swing.JFrame {
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(dashboardLabel)
-                    .addComponent(tingkatButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buatLaporanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(dashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(menuPanelLayout.createSequentialGroup()
+                        .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dashboardLabel)
+                            .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         menuPanelLayout.setVerticalGroup(
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,36 +117,45 @@ public class dashboardPengguna extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(dashboardLabel)
                 .addGap(18, 18, 18)
-                .addComponent(buatLaporanButton)
-                .addGap(18, 18, 18)
-                .addComponent(tingkatButton)
-                .addContainerGap(608, Short.MAX_VALUE))
+                .addComponent(dashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 513, Short.MAX_VALUE)
+                .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
 
-        welcomeLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        welcomeLabel.setText("Selamat Datang atauApa");
+        welcomeLabel.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+        welcomeLabel.setText("Selamat Datang atauApa di E-Lapor");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 509, Short.MAX_VALUE)
+                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(welcomeLabel)
-                .addContainerGap())
+                .addContainerGap(321, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(menuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(53, 53, 53)
                 .addComponent(welcomeLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
+        // TODO add your handling code here:
+        login in = new login();
+        in.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_logoutButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,9 +197,10 @@ public class dashboardPengguna extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buatLaporanButton;
+    private javax.swing.JButton dashboardButton;
     private javax.swing.JLabel dashboardLabel;
+    private javax.swing.JButton logoutButton;
     private javax.swing.JPanel menuPanel;
-    private javax.swing.JButton tingkatButton;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,6 +30,7 @@ public class laporan extends javax.swing.JFrame {
         menuPanel = new javax.swing.JPanel();
         menuLabel = new javax.swing.JLabel();
         tingkatButton = new javax.swing.JButton();
+        dashboardButton = new javax.swing.JButton();
         buatLaporanLabel = new javax.swing.JLabel();
         tanggalLaporanLabel = new javax.swing.JLabel();
         kabupatenLaporanLabel = new javax.swing.JLabel();
@@ -44,15 +45,28 @@ public class laporan extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Buat Laporan");
+        setBackground(new java.awt.Color(244, 248, 250));
 
-        menuPanel.setBackground(new java.awt.Color(255, 255, 255));
+        menuPanel.setBackground(new java.awt.Color(3, 5, 9));
+        menuPanel.setForeground(new java.awt.Color(3, 5, 9));
         menuPanel.setPreferredSize(new java.awt.Dimension(200, 720));
 
-        menuLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        menuLabel.setBackground(new java.awt.Color(3, 5, 9));
+        menuLabel.setFont(new java.awt.Font("Lato", 1, 18)); // NOI18N
+        menuLabel.setForeground(new java.awt.Color(244, 248, 250));
         menuLabel.setText("Menu");
 
-        tingkatButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tingkatButton.setBackground(new java.awt.Color(244, 248, 250));
+        tingkatButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        tingkatButton.setForeground(new java.awt.Color(3, 5, 9));
+        tingkatButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/chartIcon.png"))); // NOI18N
         tingkatButton.setText("Tingkat Kriminalitas");
+
+        dashboardButton.setBackground(new java.awt.Color(244, 248, 250));
+        dashboardButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        dashboardButton.setForeground(new java.awt.Color(3, 5, 9));
+        dashboardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/dashboard.png"))); // NOI18N
+        dashboardButton.setText("Dashboard");
 
         javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
         menuPanel.setLayout(menuPanelLayout);
@@ -62,7 +76,8 @@ public class laporan extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(menuLabel)
-                    .addComponent(tingkatButton))
+                    .addComponent(tingkatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         menuPanelLayout.setVerticalGroup(
@@ -71,26 +86,36 @@ public class laporan extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(menuLabel)
                 .addGap(18, 18, 18)
-                .addComponent(tingkatButton)
-                .addContainerGap(649, Short.MAX_VALUE))
+                .addComponent(dashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tingkatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(574, Short.MAX_VALUE))
         );
 
-        buatLaporanLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        buatLaporanLabel.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+        buatLaporanLabel.setForeground(new java.awt.Color(3, 5, 9));
         buatLaporanLabel.setText("Buat Laporan");
 
-        tanggalLaporanLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tanggalLaporanLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        tanggalLaporanLabel.setForeground(new java.awt.Color(3, 5, 9));
         tanggalLaporanLabel.setText("Tanggal Kejadian");
 
-        kabupatenLaporanLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        kabupatenLaporanLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        kabupatenLaporanLabel.setForeground(new java.awt.Color(3, 5, 9));
         kabupatenLaporanLabel.setText("Wilayah Kejadian");
 
-        jenisLaporanLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jenisLaporanLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        jenisLaporanLabel.setForeground(new java.awt.Color(3, 5, 9));
         jenisLaporanLabel.setText("Jenis Kriminalitas");
 
-        jenisKriminalitasComboBox.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jenisKriminalitasComboBox.setBackground(new java.awt.Color(244, 248, 250));
+        jenisKriminalitasComboBox.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        jenisKriminalitasComboBox.setForeground(new java.awt.Color(3, 5, 9));
         jenisKriminalitasComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pencurian", "Perampokan", "Pembunuhan", "Pemusnahan", "Perampasan", "Penyiksaan", "Perkosaan", "Penganiayaan", "Lainnya" }));
 
-        wilayahKriminalitasComboBox.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        wilayahKriminalitasComboBox.setBackground(new java.awt.Color(244, 248, 250));
+        wilayahKriminalitasComboBox.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        wilayahKriminalitasComboBox.setForeground(new java.awt.Color(3, 5, 9));
         wilayahKriminalitasComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kulon Progo", "Bantul", "Gunung Kidul", "Sleman", "Kota Yogyakarta" }));
         wilayahKriminalitasComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,11 +123,14 @@ public class laporan extends javax.swing.JFrame {
             }
         });
 
-        detailLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        detailLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        detailLabel.setForeground(new java.awt.Color(3, 5, 9));
         detailLabel.setText("Detail Kejadian");
 
-        laporanButton.setBackground(new java.awt.Color(214, 48, 49));
-        laporanButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        laporanButton.setBackground(new java.awt.Color(244, 248, 250));
+        laporanButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        laporanButton.setForeground(new java.awt.Color(3, 5, 9));
+        laporanButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/createCircle.png"))); // NOI18N
         laporanButton.setText("Buat Laporan");
         laporanButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,66 +138,73 @@ public class laporan extends javax.swing.JFrame {
             }
         });
 
+        detailTextArea.setBackground(new java.awt.Color(244, 248, 250));
         detailTextArea.setColumns(20);
+        detailTextArea.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        detailTextArea.setForeground(new java.awt.Color(3, 5, 9));
         detailTextArea.setRows(5);
         jScrollPane1.setViewportView(detailTextArea);
+
+        jDateChooser2.setForeground(new java.awt.Color(3, 5, 9));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buatLaporanLabel)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(laporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(wilayahKriminalitasComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jenisLaporanLabel)
-                                .addComponent(tanggalLaporanLabel)
-                                .addComponent(kabupatenLaporanLabel)
-                                .addComponent(detailLabel))
-                            .addGap(24, 24, 24)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane1)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(wilayahKriminalitasComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 200, Short.MAX_VALUE)
-                                        .addComponent(jenisKriminalitasComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGap(300, 300, 300))))))
-                .addGap(0, 13, Short.MAX_VALUE))
+                                    .addComponent(jenisLaporanLabel)
+                                    .addGap(29, 29, 29)
+                                    .addComponent(jenisKriminalitasComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(buatLaporanLabel))
+                            .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(laporanButton)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tanggalLaporanLabel)
+                                    .addComponent(kabupatenLaporanLabel)
+                                    .addComponent(detailLabel))
+                                .addGap(31, 31, 31)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 13, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(buatLaporanLabel)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(menuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(buatLaporanLabel)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jenisLaporanLabel)
                             .addComponent(jenisKriminalitasComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(kabupatenLaporanLabel)
                             .addComponent(wilayahKriminalitasComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tanggalLaporanLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(detailLabel)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(tanggalLaporanLabel))
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(detailLabel)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addComponent(laporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(laporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -221,6 +256,7 @@ public class laporan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel buatLaporanLabel;
+    private javax.swing.JButton dashboardButton;
     private javax.swing.JLabel detailLabel;
     private javax.swing.JTextArea detailTextArea;
     private com.toedter.calendar.JDateChooser jDateChooser2;
