@@ -47,16 +47,25 @@ public class editPengguna extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Edit Pengguna");
 
-        menuPanel.setBackground(new java.awt.Color(255, 255, 255));
+        menuPanel.setBackground(new java.awt.Color(3, 5, 9));
+        menuPanel.setForeground(new java.awt.Color(3, 5, 9));
         menuPanel.setPreferredSize(new java.awt.Dimension(200, 720));
 
-        menuLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        menuLabel.setBackground(new java.awt.Color(3, 5, 9));
+        menuLabel.setFont(new java.awt.Font("Lato", 1, 18)); // NOI18N
+        menuLabel.setForeground(new java.awt.Color(244, 248, 250));
         menuLabel.setText("Menu");
 
-        buatLaporanButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        buatLaporanButton.setBackground(new java.awt.Color(244, 248, 250));
+        buatLaporanButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        buatLaporanButton.setForeground(new java.awt.Color(3, 5, 9));
+        buatLaporanButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/createCircle.png"))); // NOI18N
         buatLaporanButton.setText("Buat Laporan");
 
-        tingkatButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tingkatButton.setBackground(new java.awt.Color(244, 248, 250));
+        tingkatButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        tingkatButton.setForeground(new java.awt.Color(3, 5, 9));
+        tingkatButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/chartIcon.png"))); // NOI18N
         tingkatButton.setText("Tingkat Kriminalitas");
 
         javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
@@ -67,8 +76,8 @@ public class editPengguna extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(menuLabel)
-                    .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tingkatButton))
+                    .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tingkatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         menuPanelLayout.setVerticalGroup(
@@ -77,32 +86,40 @@ public class editPengguna extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(menuLabel)
                 .addGap(18, 18, 18)
-                .addComponent(buatLaporanButton)
-                .addGap(18, 18, 18)
-                .addComponent(tingkatButton)
-                .addContainerGap(608, Short.MAX_VALUE))
+                .addComponent(buatLaporanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tingkatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(574, Short.MAX_VALUE))
         );
 
-        editLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        editLabel.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
         editLabel.setText("Edit Pengguna");
 
-        usernameLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        usernameLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
         usernameLabel.setText("Username");
 
-        namaLengkapLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        namaLengkapLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
         namaLengkapLabel.setText("Nama Lengkap");
 
-        roleLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        roleLabel.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
         roleLabel.setText("Role");
 
-        usernameTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        usernameTextField.setBackground(new java.awt.Color(244, 248, 250));
+        usernameTextField.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        usernameTextField.setForeground(new java.awt.Color(3, 5, 9));
 
-        namaLengkapTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        namaLengkapTextField.setBackground(new java.awt.Color(244, 248, 250));
+        namaLengkapTextField.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        namaLengkapTextField.setForeground(new java.awt.Color(3, 5, 9));
 
-        roleComboBox.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        roleComboBox.setBackground(new java.awt.Color(244, 248, 250));
+        roleComboBox.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        roleComboBox.setForeground(new java.awt.Color(3, 5, 9));
         roleComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Pengguna" }));
 
-        tambahButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tambahButton.setBackground(new java.awt.Color(244, 248, 250));
+        tambahButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        tambahButton.setForeground(new java.awt.Color(3, 5, 9));
         tambahButton.setText("Tambah");
         tambahButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,10 +127,14 @@ public class editPengguna extends javax.swing.JFrame {
             }
         });
 
-        editJButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        editJButton.setBackground(new java.awt.Color(244, 248, 250));
+        editJButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        editJButton.setForeground(new java.awt.Color(3, 5, 9));
         editJButton.setText("Edit");
 
-        hapusJButton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        hapusJButton.setBackground(new java.awt.Color(244, 248, 250));
+        hapusJButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        hapusJButton.setForeground(new java.awt.Color(3, 5, 9));
         hapusJButton.setText("Hapus");
 
         jTable1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -135,28 +156,31 @@ public class editPengguna extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(roleLabel)
+                        .addGap(96, 96, 96)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(tambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(hapusJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(roleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(editLabel)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(namaLengkapLabel)
-                            .addComponent(roleLabel)
-                            .addComponent(usernameLabel))
-                        .addGap(23, 23, 23)
+                            .addComponent(usernameLabel)
+                            .addComponent(namaLengkapLabel))
+                        .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(roleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(tambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(hapusJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(0, 84, Short.MAX_VALUE))
+                            .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,18 +188,18 @@ public class editPengguna extends javax.swing.JFrame {
                 .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addGap(52, 52, 52)
                 .addComponent(editLabel)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameLabel)
                     .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(namaLengkapLabel)
                     .addComponent(namaLengkapTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(roleLabel)
                     .addComponent(roleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
