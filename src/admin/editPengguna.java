@@ -125,6 +125,7 @@ public class editPengguna extends javax.swing.JFrame {
         tambahButton.setBackground(new java.awt.Color(244, 248, 250));
         tambahButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
         tambahButton.setForeground(new java.awt.Color(3, 5, 9));
+        tambahButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/add.png"))); // NOI18N
         tambahButton.setText("Tambah");
         tambahButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,14 +136,18 @@ public class editPengguna extends javax.swing.JFrame {
         editJButton.setBackground(new java.awt.Color(244, 248, 250));
         editJButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
         editJButton.setForeground(new java.awt.Color(3, 5, 9));
+        editJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/createIcon.png"))); // NOI18N
         editJButton.setText("Edit");
 
         hapusJButton.setBackground(new java.awt.Color(244, 248, 250));
         hapusJButton.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
         hapusJButton.setForeground(new java.awt.Color(3, 5, 9));
+        hapusJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/delete.png"))); // NOI18N
         hapusJButton.setText("Hapus");
 
-        jTable1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTable1.setBackground(new java.awt.Color(244, 248, 250));
+        jTable1.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(3, 5, 9));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -169,11 +174,11 @@ public class editPengguna extends javax.swing.JFrame {
                         .addGap(96, 96, 96)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(tambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(hapusJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(hapusJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(roleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(editLabel)
